@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer</title>
+    <!-- Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Container for the whole app -->
+    <div class="wrapper">
+      <!-- Top section with preset time buttons -->
+      <div class="preset-controls">
+        <button class="preset-btn" data-minutes="5">5 mins</button>
+        <button class="preset-btn" data-minutes="10">10 mins</button>
+        <button class="preset-btn active" data-minutes="20">20 mins</button>
+      </div>
+      <!-- Main timer card -->
+      <div class="timer-card">
+        <!-- Left Side: timer display and controls -->
+        <div class="timer-section">
+          <p class="timer-label">Timer</p>
+          <div class="timer-display">00:00</div>
+          <button class="stop-btn">Stop</button>
+        </div>
+        <!-- Right side: Play/Pause Button -->
+        <div class="control-section">
+          <button class="play-pause-btn">
+            <i class="fa-solid fa-pause" style="color: #8b92e8"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Progress bar at bottom -->
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

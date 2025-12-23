@@ -1,0 +1,120 @@
+:root {
+  --background-gradient: linear-gradient(180deg, #a8b8ff 0%, #4f46e5 100%);
+  --box-shadow: 0 8px 32px rgba(50, 51, 140, 0.701);
+  --font-dark-color: #4f46e5;
+  --font-light-purple: #656fd9;
+  --timer-card-bg: #eef2ff;
+  --white-color: #ffffff;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: var(--background-gradient);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 26%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.preset-controls {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.preset-btn {
+  background-color: var(--white-color);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  color: var(--font-light-purple);
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.preset-btn.active {
+  background-image: var(--background-gradient);
+  color: var(--white-color);
+  box-shadow: var(--box-shadow);
+}
+
+.timer-card {
+  background-color: var(--timer-card-bg);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 30px;
+  margin-bottom: 3rem;
+  box-shadow: var(--box-shadow);
+}
+.timer-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  height: 100%;
+}
+.timer-label {
+  color: var(--font-light-purple);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.timer-display {
+  color: var(--font-dark-color);
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+.stop-btn {
+  background-color: var(--font-light-purple);
+  border: none;
+  font-size: 1.55rem;
+  font-weight: 500;
+  color: var(--white-color);
+  padding: 0.25rem 1.95rem;
+  width: fit-content;
+  border-radius: 10px;
+}
+.play-pause-btn {
+  border: none;
+  outline: 4px solid var(--font-dark-color);
+  padding: 3.5rem;
+  background-color: transparent;
+  border-radius: 30px;
+}
+.play-pause-btn i {
+  font-size: 4rem;
+}
+
+.progress-container {
+  width: 40%;
+  height: 0.85rem;
+  background-color: var(--timer-card-bg);
+  border-radius: 3rem;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  padding: 0.1rem 0.15rem;
+}
+.progress-bar {
+  width: 10%;
+  height: 100%;
+  border-radius: 2rem;
+  background-image: var(--background-gradient);
+}
